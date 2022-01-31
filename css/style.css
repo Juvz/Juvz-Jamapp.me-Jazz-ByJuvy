@@ -1,0 +1,285 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	margin: 0%;
+	padding: 0%;
+}
+
+body {
+	background: rgb(248, 248, 248);
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+	font-size: 10px;
+	place-items: center;
+	max-width: 1620px;
+	min-height: 100vh;
+}
+
+.overlay {
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #fff;
+	width: 100%;
+	border-radius: 2rem;
+	align-items: center;
+	box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+ul {
+	margin-left: auto;
+	margin-right: auto;
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	width: 500px;
+}
+
+@media (max-width: 600px) {
+	.overlay {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		padding: 20px;
+		max-width: 100%;
+		border-radius: 1rem;
+		box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(46, 41, 41, 0.125);
+	}
+
+	ul {
+		font-size: 7.5px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		display: inline-block;
+	}
+	ul li label {
+		border-radius: 12px 10px 10px 12px;
+		padding: 20px;
+		font-size: 7.5px;
+		padding: 5px;
+		max-width: 100%;
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	ul li input[type="checkbox"] {
+		padding: 20px;
+		display: none;
+		width: 400px;
+		display: inline-block;
+		text-align: left;
+	}
+}
+
+ul li label {
+	/* box-shadow: 3px 2px 1px #00000075; */
+	border-radius: 10px 10px 10px 10px;
+	padding: 50px;
+	border: 1px solid grey;
+	border-top: 1px solid #878e98;
+	border-bottom: 1px solid grey;
+	color: black;
+	/* text-shadow: 0 1px 1px lightgray; */
+	letter-spacing: 0.09em;
+}
+
+ul li input[type="checkbox"] {
+	display: none;
+}
+
+ul li label {
+	display: block;
+	padding: 12px;
+	padding-bottom: 10px;
+	width: 500px;
+}
+ul li label:hover {
+	border-radius: 0px;
+	background: #ddd;
+}
+
+ul li i {
+	vertical-align: middle;
+	width: 20px;
+	display: inline-block;
+}
+
+ul li span {
+	margin-bottom: 0cm;
+	display: inline;
+	float: right;
+	border: 1px solid #3c434c;
+	border-bottom: 1px solid #707781;
+	padding: 3px 5px;
+	font-size: 10px;
+	-moz-border-radius: 12px;
+	border-radius: 5px;
+	position: relative;
+}
+
+ul li input[type="checkbox"]:checked ~ label {
+	background: #44c6eb;
+	border-top: 1px solid #878e98;
+	border-bottom: 1px solid #2799db;
+}
+
+ul li input[type="checkbox"]:checked ~ label span {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #d5d7d8;
+}
+
+ul li input[type="checkbox"]:checked ~ .options {
+	border-radius: 0 0 10px 10px;
+	border: 1px solid grey;
+	height: auto;
+	display: block;
+	min-height: 40px;
+	max-height: 400px;
+}
+
+ul ul li a {
+	display: block;
+	padding: 6px 12px;
+	color: #999;
+	text-decoration: none;
+}
+
+ul ul li a:hover {
+	color: #44c6eb;
+}
+
+ul ul li a span {
+	color: #999;
+	background: none;
+	border: 1px solid #ccc;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+ul ul li {
+	border-bottom: 1px solid #ccc;
+}
+
+ul ul li:first-child {
+	padding-top: 6px;
+}
+
+ul ul li:last-child {
+	padding-bottom: 6px;
+	border: 0;
+}
+
+.options {
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+
+.music {
+	margin-bottom: 10px;
+}
+
+.filterDiv {
+	margin: 2px;
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.jamappProductsContainer {
+	overflow: hidden;
+	font-size: 10px;
+	border: 1 px solid grey;
+}
+
+/* Style the buttons */
+
+#myBtnContainer {
+	font-size: 18px;
+	list-style: none;
+	box-shadow: 3px 3px 5px #00000075;
+	border-radius: 10px 10px 10px 10px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 45%;
+	text-align: center;
+	background: #fff;
+	border: 1 px solid grey;
+	padding: 15px;
+}
+#myBtnContainer button {
+	margin-left: 22px;
+	margin-right: 22px;
+}
+#myBtnContainer button:hover {
+	border-radius: 0;
+}
+
+@media (max-width: 767px) {
+	#myBtnContainer {
+		/* toogle */
+		display: block;
+		font-size: small;
+		width: 100%;
+		text-align: center;
+		padding: 5px;
+	}
+	#myBtnContainer button {
+		font-size: 8px;
+		margin: 5px;
+		padding: 5px;
+	}
+}
+.btn {
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	border: none;
+	outline: none;
+	padding: 10px 16px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #ddd;
+}
+
+.btn.active {
+	background-color: #666;
+	color: white;
+}
+
+.fa-music {
+	font-size: 10px;
+	color: #44c6eb;
+}
+.fa-soundcloud {
+	font-size: 10px;
+}
+.fa-tag {
+	font-size: 10px;
+	color: #44c6eb;
+}
+
+a {
+	list-style: none;
+	text-decoration: none;
+}
